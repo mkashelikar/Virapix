@@ -1,0 +1,24 @@
+#!/bin/bash
+
+ldso=`grep 'ld-.*\.so' < /proc/self/maps | head -1 | tr -s " " | cut -d " " -f6`
+
+nm --defined-only $ldso | fgrep 'no symbol' && { echo "$ldso appears to be stripped. Cannot run virapix."; exit 255; } 
+
+pkgs=(fontconfig mkxauth xauth xinit x11-server-xorg lib64xft2 lib64gtk+-x11-2.0_0 lib64xpm4)
+let max=${#pkgs[*]}
+let idx=0
+
+while [ $idx -lt $max ]
+do
+    ! rpm -q ${pkgs[$idx]} > /dev/null 2>&1 && absent=${absent}"${pkgs[$idx]} "
+    let idx=$idx+1
+done
+
+if [ -n "$absent" ]
+then
+    echo "Failed dependencies. Following packages need to be installed on the system: $absent" 
+    exit 255
+fi
+
+echo Dependency check passed!
+exit 0

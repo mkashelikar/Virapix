@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="virapix">
+</Property><Property Name="Solution File" Value="C:\My Files\linux-bak\Projects\bak\virapix\virapix.sln">
+</Property><Property Name="Date" Value="27 February 2011">
+</Property><Property Name="Time" Value="12:44">
+</Property></Properties><Event ErrorLevel="0" Project="virapix" Source="virapix.vcproj" Description="Converting project file 'C:\My Files\linux-bak\Projects\bak\virapix\virapix.vcproj'.">
+</Event><Event ErrorLevel="1" Project="virapix" Source="virapix.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="virapix" Source="virapix.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="1" Project="virapix" Source="virapix.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="0" Project="virapix" Source="virapix.vcproj" Description="Done converting to new project file 'C:\My Files\linux-bak\Projects\bak\virapix\virapix.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="virapix" Source="virapix.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="virapix.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="virapix.sln" Description="Converted">
+</Event></UpgradeLog>

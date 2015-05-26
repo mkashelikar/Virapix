@@ -1,0 +1,69 @@
+Welcome to virapix, the virtual desktop software for Linux operating system. Virapix allows you to run desktop environment off a USB key
+on any compatible Linux system. Thanks to the virtual machine, any customisation or configuration changes are localised to the USB device
+without the application even knowing it. Documents you create or modify also go in to the virtual desktop storage without affecting the host 
+system. In other words, your working environment remains the same no matter which machine you work on. You don't need any desktop software on
+the host; everything is packaged in virapix suite. However for proper functioning, the host system must have some basic ingredients like X 
+server and the associated components, the core runtime libraries like libc, libstdc++, ld.so, pthread etc., bash, tools like grep, sed, not to 
+mention scripting facilities like perl and python. Lastly, virapix works only with xguest login which means that the system should have this
+package installed as well. The script checkdeps supplied with the suite checks for missing packages.
+
+The suite comprises virapix virtual machine, fluxbox window manager, Open Office and Mozilla Firefox. It's strongly recommended to have
+a native Linux file system (eg. ext3, ext4, xfs, jfs etc.) on the USB key. FAT/VFAT won't work because it doesn't support symbolic links.
+ntfs-3g on the other hand suffers from the limitation that non-root user cannot mount the file system unless the driver is setuid root. Not
+a very appealing idea. Moreover, once ntfs-3g is mounted with the a specific uid, you cannot alter ownership of any of the files or directories.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+NOTE: The software is written and packaged for Mandriva Linux 2010.0 running kernel 2.6.33 on Intel x86_64 platform. Other architectures and 
+distros aren't yet supported.
+
+NOTE: To set up xguest login, simply run the command /usr/bin/xguest-add-helper. This of course assumes that xguest package has been installed
+on the system. Also verify that the uid for xguest login is the same on all machines (most likely to be 10000). This is a mandatory requirement 
+and not a quaint formality: identical uid guarantees that file ownership, permissions and accessibility on the USB device will remain the same on 
+any machine you work on. In addition, it's mandatory that the home directory is configured as /home/xguest.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+NOTE: There ***must*** be an entry for USB mount in /etc/fstab.
+
+A typical entry looks something like this:
+
+LABEL=transcend-jet /mnt/pendrive ext4 users,dev,exec,async,noauto 0 0
+
+A quick description of the fields:
+
+LABEL=transcend-jet - It's a good idea to attach a volume label to the device. The device file associated with the pendrive may not be the same 
+everytime and hardcoding it in fstab configuration is not guaranteed to work. For ext4, check the commands mkfs.ext4 and tune2fs.
+
+/mnt/pendrive - This is the directory to mount the file system on.
+
+ext4 - The name of the file system.
+
+users,dev,exec,async,noauto - users (anybody can mount/unmount the device), dev (correctly handle char and block special files), 
+exec (support execution of files), async (enable asynchronous IO; this increases the device's life), noauto (enforce explicit mount,
+i.e. mount -a won't have any effect).
+
+0 0 - Disable fs dumps (see dump(8)) and also disable fs check during system boot.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+NOTE: It's strongly recommended to start with a clean, formatted USB pendrive.
+
+To install the software, ***log in as root***, switch to the installation directory on the media and type the command:
+
+./install.sh <mount point>
+
+For the fstab example above, the command will look like:
+
+./install.sh /mnt/pendrive
+
+NOTE: The install script will fail if the pendrive is already mounted. This is to avoid accidental installation on a mounted file system
+of the host machine in the event of a wrong mount point being passed to install.sh. 
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+To uninstall the software, ***log in as root***, switch to the installation directory on the media and type the command:
+
+./uninstall.sh <mount point>
+
+The same rules as above apply.

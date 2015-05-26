@@ -1,0 +1,17 @@
+1. Add a check for xguest user id.
+2. Add the ability to run terminal applications (xterm, konsole etc.); they invoke setsid() which fails because virapix makes every application that
+it controls a group leader. 
+3. Support package upgrade and triggers. Also change packaging strategy.
+4. OpenOffice runs with some graphic widgets/icons disabled. This has to be corrected.
+5. Be more rigorous with package dependency check. 
+6. virapix yet to be tested on 32 bit Linux.
+7. In the "file open" dialog box in OpenOffice, the contents of the virtual directory are shown as expected. However, if an absolute path is typed
+in the edit box, the "real" directory is exposed. We cannot intercept getdents() since this syscall is used elsewhere too. Need to find a proper 
+solution.
+8. Should be able to work with stripped ld.so binary as well. Currently this isn't possible. 
+9. Relax the restriction of requiring to have the same USB mount point and xguest home directory on all host systems.
+10. Audio support.
+11. Support on-demand installation of packages (from Firefox for instance) while in session.
+12. How to deal with device files opened in write mode or whose attributes are to be changed?
+13. Support for distros other than Mandriva.
+14. Explore the option of autorun for the USB device.

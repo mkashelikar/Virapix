@@ -1,0 +1,53 @@
+                            -----------------Steps to run virapix-----------------
+
+1. Ensure that the host system has xguest package installed and xguest user configured. This is a mandatory requirement. The home directory
+***must*** be set as /home/xguest.
+
+2. Log in as xguest.
+
+3. Insert the USB key (with virapix suite installed) in any available slot on your system. If autofs has been correctly configured, 
+the device will mount automatically. In all other cases, you'll have to mount it manually. Although it'd be most desirable to be able to mount the
+device as xguest, the system security policy may not allow so. If that's the case, you'll have to mount the device as root (through command 
+su - root). In any event, ensure that the directories rt, rt/home/xguest, and rt/virapix under the mount point are owned and writable by xguest. If 
+the device has the appropriate file system (eg. ext4, xfs, jfs etc.), you won't have to worry about this since the installation procedure would have 
+taken care of directory ownership. Please consult the documentation for mount and fstab if the owner appears to be somebody other than xguest.
+
+4. If you had to switch to the root login earlier, exit the shell which should return you to xguest login. Assuming the mount point to be 
+/mnt/pendrive, run the command /mnt/pendrive/rt/virapix/bin/checkdeps. This will do a quick check for mandatory packages on the host. Although 
+virapix suite comes with much of the required software, it still requires the most fundamental packages to be preinstalled on the host machine.
+checkdeps will also see whether or not ld.so is stripped. If it is, well, you are out of luck.
+
+5. The configuration for virapix is simple and is stored in virapix/cfg/.virapixrc. It's a text file with format "name = value". There shall be
+only one property per line, i.e. shell style "\" for command continuation is not supported. In addition, the length of a line shall not exceed
+1024 characters. Comments are marked by hash ("#"), i.e. everything after hash on that line is discarded. Case is ignored and so are white spaces 
+except of course the newline character. Information about individual property appears in .virapixrc itself.
+
+6. If all looks well, you are ready to go! Run the command /mnt/pendrive/rt/virapix/bin/vlaunch and you'll be in a new session running entirely in
+a virtual machine off the USB key.
+
+7. Few words of caution: 
+    ***NEVER*** run virapix directly; always use the script vlaunch provided for the very purpose.
+    ***NEVER*** attempt to install any packages when in virapix session; Firefox plugins can be installed though.
+
+8. Before exiting fluxbox session, be sure to close all running applications.
+
+                --------------------------------------- Restrictions --------------------------------------
+
+1. Statically linked applications not supported.
+2. ld-linux.so on the host system must ***not*** be stripped. That is, it must contain the full symbol table (.symtab section).
+3. Any call to rename() or link() will fail if the source path does not lie on the USB. This is because these system calls don't work across
+mount points.
+4. A call to symlink() will successfully create the symbolic link at the appropriate location on the USB drive, but if the source file lies on the 
+host system then any future writes/modifications using the symbolic link will show in that file. Indeed this is against the very philosophy of the 
+virtual machine. This limitation exists with any symlink present on the pendrive and which points to a file on the host machine.
+5. Files/directories (on the host) that are unlink()ed/rmdir()ed/rename()d are still available if the application tries to access them again.
+This is because only the versions on the pendrive are actually affected; those on the host are untouched. 
+6. Similar to (5), system calls that change attributes (chmod(), fsetxattr() etc.) or write to files will fail if the file exists on the host but 
+not on the USB device. Of course, this limitation does ***not*** apply to file creation system calls.
+7. File paths are restricted to 255 bytes. 
+8. The mount point of the USB device needs to be the same across host systems and so should be xguest home directory. That's because applications
+hard code these values in the per-user configuration files that they create in the home directory.
+9. NIS logins not supported as of now. (The installation script uses /etc/passwd).
+10. Packaged for and tested only on Mandriva Linux 2010.0.
+
+Thankfully, (4), (5) and (6) are least likely to occur in practice.

@@ -1,0 +1,162 @@
+#!/bin/bash
+
+################################################## Variable declarations ###################################################
+
+MOUNTPOINT=
+PREVMOUNTPOINT=
+VIRAPIX=
+NEWROOT=
+XGUESTHOME=
+FLUXDIR=
+
+################################################## Function definitions ###################################################
+
+ValidateLogin()
+{
+    xguestEntry=`egrep '\<xguest\>' /etc/passwd`
+    [ -z "$xguestEntry" ] && { echo "xguest login not found. Is xguest package installed?"; return 255; }
+
+    xguestCurHome=`echo $xguestEntry | cut -d":" -f6`
+    [ -z "$xguestCurHome" ] && { echo "Missing home directory for login xguest."; return 255; }
+    [ $xguestCurHome != "/home/xguest" ] && { echo "xguest home directory is $xguestCurHome. It should be /home/xguest"; return 255; }
+
+    [ "$USER" != "xguest" ] && { echo "You need to be logged in as xguest to run virapix."; return 255; }
+
+    return 0
+}
+
+SetDirs()
+{
+    scriptName=${0##*/}
+    scriptFullPath="$(cd "${0%/*}" 2>/dev/null; echo "$PWD"/"${0##*/}")"
+    export NEWROOT=${scriptFullPath%/virapix/bin/$scriptName}
+    MOUNTPOINT=${NEWROOT%/rt}
+    XGUESTHOME="${NEWROOT}/home/xguest"
+    VIRAPIX=$NEWROOT/virapix/bin/virapix
+}
+
+SetRPath()
+{
+    rPath=$($NEWROOT/usr/bin/patchelf --print-rpath $VIRAPIX)
+
+    if [ -z "$rPath" ]
+    then
+        $NEWROOT/usr/bin/patchelf --set-rpath $NEWROOT/usr/lib64 $VIRAPIX
+        PREVMOUNTPOINT=$MOUNTPOINT
+    else
+        PREVMOUNTPOINT=${rPath%%/rt*}
+    fi
+}
+
+CheckMountPt()
+{
+    if [ $MOUNTPOINT = $PREVMOUNTPOINT ]
+    then
+        [ ! -L $MOUNTPOINT ] && return 0
+        echo "The mount point $MOUNTPOINT must be a directory; it cannot be a symbolic link."
+        return 255
+    fi
+
+    echo "The current mount point ($MOUNTPOINT) of the USB device is different from the previous ($PREVMOUNTPOINT)."
+
+    if [ -d $PREVMOUNTPOINT -a ! -h $PREVMOUNTPOINT ]
+    then
+        echo "Please mount the device at $PREVMOUNTPOINT instead."
+    else
+        echo "Please create directory $PREVMOUNTPOINT to mount the USB device."
+    fi
+
+    return 255
+}
+
+CheckFluxMenu()
+{
+    NEWROOT_SED=${NEWROOT////\\/}
+    FLUXMENU="$XGUESTHOME/.fluxbox/menu"
+    FLUXSTYLES="/usr/share/fluxbox/styles"
+    FLUXSTYLES_SED="\/usr\/share\/fluxbox\/styles"
+
+    match=`egrep -n "^[ \t]*\[stylesdir\][ \t]*\(.*$FLUXSTYLES\)" $FLUXMENU`
+
+    #First check is there's an entry for system style at all!
+    if [ -n "$match" ]
+    then
+        lineNo=${match%%:*}
+        content=${match#*:}
+
+        #Make changes only if the path is not already rooted at the expected location on the USB 
+        if ! [[ $content =~ .*\($NEWROOT$FLUXSTYLES\) ]]
+        then
+            sed -i "${lineNo}s/(.*)/($NEWROOT_SED$FLUXSTYLES_SED)/1" $FLUXMENU
+        fi
+    fi
+}
+
+GetAvailableDisplay()
+{
+    xServers=(X Xorg X11)
+    running=
+    len=${#xServers[*]}
+    retval=0
+
+    for (( idx = 0; idx < len; ++idx ))
+    do
+        if pgrep -x ${xServers[idx]} > /dev/null 2>&1
+        then
+            running=${xServers[idx]}
+            break
+        fi
+    done
+
+    [ -z "$running" ] && return $retval
+
+
+    OLDIFS=$IFS
+    IFS=$'\n'
+
+    prevDisplay=-1
+
+    for proc in $(ps -w -o args= -p $(pgrep -x -d, $running) | sort -t":" -n -k2)
+    do
+        temp=${proc#*:}
+        display=${temp%% *}
+
+        if (( prevDisplay != -1 && display > prevDisplay + 1 ))
+        then
+            (( retval = prevDisplay + 1 ))
+            break
+        fi
+
+        (( prevDisplay = display ))
+    done
+
+    (( prevDisplay == display )) && (( retval = display + 1 ))
+
+    IFS=$OLDIFS
+    return $retval
+}
+
+######################################################## The actual startup logic  ####################################################
+
+! ValidateLogin && exit -1
+SetDirs
+SetRPath
+! CheckMountPt && exit -1
+
+CheckFluxMenu
+GetAvailableDisplay
+VIRAPIX_DISPLAY=$?
+
+export XAUTHORITY=$XGUESTHOME/.Xauthority
+
+if [ ! -f $XAUTHORITY ]
+then
+    xAuth=$HOME/.Xauthority
+    cp $xAuth ${xAuth}.bak
+    mkxauth -q -c
+    mv $xAuth $XAUTHORITY
+    mv ${xAuth}.bak $xAuth
+fi
+
+export HOME=$XGUESTHOME
+exec startx $VIRAPIX $NEWROOT/usr/bin/startfluxbox -- :$VIRAPIX_DISPLAY 

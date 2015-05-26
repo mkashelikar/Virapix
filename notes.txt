@@ -1,0 +1,27 @@
+1. If the executable (i.e. the start application) passed to virapix lives on the host system, it should not also be present in the
+same relative location in the new hierarchy.
+2. Watch out for word size differences when using ptrace() with 32 bit applications.
+3. Syscalls mapping between 32 and 64 bit: some calls like truncate64() etc. exist only on the former. How do we deal with such 
+functions?
+4. (FYI) Linux ignores the file creation flags (O_CREAT etc.) and file access flags (O_WRONLY etc.) in F_SETFL command of fcntl(). If 
+this were not the case, we would have had to include this function in our list of intercepted system calls.
+5. CProcCtrl destructors not called.
+6. The execve() mystery: why does ptrace() report exit events sporadically?
+7. Why is SIGCHLD delivered to the controlling threads after process fork?
+
+                            ************************ DONE **************************
+
+1. For all fXXXX() functions (non-at but take descriptors, e.g. fchmod()), if the path is already rooted correctly, we don't
+change the syscall to its non-f equivalent, but CSyscallState makes this (wrong) assumption anyway.
+2. Exception handling needs to be improved.
+3. If one of the applications terminates, its controlling appvirt thread should also be shutdown immediately. At present, this happens
+only in ~CApp() towards the very end.
+4. The signals sent explicitly by us may interrupt system calls. Investigate side effects.
+5. Catch attempts to block SIGTRAP (either through sigprocmask() or through sigaction() during signal handler execution) // NO ISSUE
+6. Functions that never return, eg. sigreturn()
+7. Understand the implications of CLONE_PTRACE and CLONE_UNTRACED flags of clone()
+8. Multithreaded applications! // NO ISSUE
+9. Dealing with vfork() // NO ISSUE
+10. Orphaned grandchildren // NO ISSUE
+11. Check -rpath or -R option of ld to embed the library path of lib64log4cpp4. To check if this is necessary, uninstall lib64log4cpp4 ***from the
+host system*** and run virapix from USB (which has the package installed).

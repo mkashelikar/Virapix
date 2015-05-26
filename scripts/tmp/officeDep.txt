@@ -1,0 +1,194 @@
+error: Failed dependencies:
+	libjvmaccessgcc3.so.3()(64bit) is needed by openoffice.org-core-1:3.1.1-2mdv2010.0.x86_64
+	libjvmfwk.so.3()(64bit) is needed by openoffice.org-core-1:3.1.1-2mdv2010.0.x86_64
+	libraptor.so.1()(64bit) is needed by openoffice.org-core-1:3.1.1-2mdv2010.0.x86_64
+	librdf.so.0()(64bit) is needed by openoffice.org-core-1:3.1.1-2mdv2010.0.x86_64
+	libsclx.so()(64bit) is needed by openoffice.org-core-1:3.1.1-2mdv2010.0.x86_64
+	libuno_cppuhelpergcc3.so.3()(64bit) is needed by openoffice.org-core-1:3.1.1-2mdv2010.0.x86_64
+	libuno_cppu.so.3()(64bit) is needed by openoffice.org-core-1:3.1.1-2mdv2010.0.x86_64
+	libuno_salhelpergcc3.so.3()(64bit) is needed by openoffice.org-core-1:3.1.1-2mdv2010.0.x86_64
+	libuno_sal.so.3()(64bit) is needed by openoffice.org-core-1:3.1.1-2mdv2010.0.x86_64
+error: Failed dependencies:
+	openoffice.org-core = 1:3.1.1 is needed by openoffice.org-common-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-style = 1:3.1.1 is needed by openoffice.org-common-1:3.1.1-2mdv2010.0.x86_64
+	lib64sane1 is needed by openoffice.org-common-1:3.1.1-2mdv2010.0.x86_64
+	sane-backends is needed by openoffice.org-common-1:3.1.1-2mdv2010.0.x86_64
+	libcomphelp4gcc3.so()(64bit) is needed by openoffice.org-common-1:3.1.1-2mdv2010.0.x86_64
+	libpsplx.so()(64bit) is needed by openoffice.org-common-1:3.1.1-2mdv2010.0.x86_64
+	libsofficeapp.so()(64bit) is needed by openoffice.org-common-1:3.1.1-2mdv2010.0.x86_64
+	libsvllx.so()(64bit) is needed by openoffice.org-common-1:3.1.1-2mdv2010.0.x86_64
+	libsvxcorelx.so()(64bit) is needed by openoffice.org-common-1:3.1.1-2mdv2010.0.x86_64
+	libtllx.so()(64bit) is needed by openoffice.org-common-1:3.1.1-2mdv2010.0.x86_64
+	libucbhelper4gcc3.so()(64bit) is needed by openoffice.org-common-1:3.1.1-2mdv2010.0.x86_64
+	libunopkgapp.so()(64bit) is needed by openoffice.org-common-1:3.1.1-2mdv2010.0.x86_64
+	libvcllx.so()(64bit) is needed by openoffice.org-common-1:3.1.1-2mdv2010.0.x86_64
+	libvclplug_genlx.so()(64bit) is needed by openoffice.org-common-1:3.1.1-2mdv2010.0.x86_64
+	libvos3gcc3.so()(64bit) is needed by openoffice.org-common-1:3.1.1-2mdv2010.0.x86_64
+error: Failed dependencies:
+	openoffice.org-core = 1:3.1.1 is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-common = 1:3.1.1 is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	hsqldb is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libcomphelp4gcc3.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libdbalx.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libdbtoolslx.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libforlx.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libforuilx.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libfwelx.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libgolx.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libi18nisolang1gcc3.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libsfxlx.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libsotlx.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libsvllx.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libsvtlx.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libsvxcorelx.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libsvxlx.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libtklx.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libtllx.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libucbhelper4gcc3.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libuno_cppuhelpergcc3.so.3()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libuno_cppu.so.3()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libuno_sal.so.3()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libutllx.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libvcllx.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libvos3gcc3.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+	libxolx.so()(64bit) is needed by openoffice.org-base-1:3.1.1-2mdv2010.0.x86_64
+error: Failed dependencies:
+	openoffice.org-core = 1:3.1.1 is needed by openoffice.org-java-common-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-common = 1:3.1.1 is needed by openoffice.org-java-common-1:3.1.1-2mdv2010.0.x86_64
+	java is needed by openoffice.org-java-common-1:3.1.1-2mdv2010.0.x86_64
+error: Failed dependencies:
+	openoffice.org-common is needed by openoffice.org-writer2xhtml-0.5.0.2-5mdv2010.0.x86_64
+error: Failed dependencies:
+	openoffice.org-core = 1:3.1.1 is needed by openoffice.org-openclipart-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-common = 1:3.1.1 is needed by openoffice.org-openclipart-1:3.1.1-2mdv2010.0.x86_64
+	clipart-openclipart is needed by openoffice.org-openclipart-1:3.1.1-2mdv2010.0.x86_64
+error: Failed dependencies:
+	openoffice.org-core = 1:3.1.1 is needed by openoffice.org-style-crystal-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-common = 1:3.1.1 is needed by openoffice.org-style-crystal-1:3.1.1-2mdv2010.0.x86_64
+error: Failed dependencies:
+	openoffice.org-core = 1:3.1.1 is needed by openoffice.org-draw-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-common = 1:3.1.1 is needed by openoffice.org-draw-1:3.1.1-2mdv2010.0.x86_64
+	libbasegfxlx.so()(64bit) is needed by openoffice.org-draw-1:3.1.1-2mdv2010.0.x86_64
+	libcomphelp4gcc3.so()(64bit) is needed by openoffice.org-draw-1:3.1.1-2mdv2010.0.x86_64
+	libsotlx.so()(64bit) is needed by openoffice.org-draw-1:3.1.1-2mdv2010.0.x86_64
+	libsvtlx.so()(64bit) is needed by openoffice.org-draw-1:3.1.1-2mdv2010.0.x86_64
+	libsvxcorelx.so()(64bit) is needed by openoffice.org-draw-1:3.1.1-2mdv2010.0.x86_64
+	libtllx.so()(64bit) is needed by openoffice.org-draw-1:3.1.1-2mdv2010.0.x86_64
+	libuno_cppuhelpergcc3.so.3()(64bit) is needed by openoffice.org-draw-1:3.1.1-2mdv2010.0.x86_64
+	libuno_cppu.so.3()(64bit) is needed by openoffice.org-draw-1:3.1.1-2mdv2010.0.x86_64
+	libuno_sal.so.3()(64bit) is needed by openoffice.org-draw-1:3.1.1-2mdv2010.0.x86_64
+	libutllx.so()(64bit) is needed by openoffice.org-draw-1:3.1.1-2mdv2010.0.x86_64
+	libvcllx.so()(64bit) is needed by openoffice.org-draw-1:3.1.1-2mdv2010.0.x86_64
+	libwpd-0.8.so.8()(64bit) is needed by openoffice.org-draw-1:3.1.1-2mdv2010.0.x86_64
+	libwpg-0.1.so.1()(64bit) is needed by openoffice.org-draw-1:3.1.1-2mdv2010.0.x86_64
+	libxolx.so()(64bit) is needed by openoffice.org-draw-1:3.1.1-2mdv2010.0.x86_64
+error: Failed dependencies:
+	openoffice.org-core = 1:3.1.1 is needed by openoffice.org-pdfimport-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-common = 1:3.1.1 is needed by openoffice.org-pdfimport-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-draw = 1:3.1.1 is needed by openoffice.org-pdfimport-1:3.1.1-2mdv2010.0.x86_64
+error: Failed dependencies:
+	openoffice.org-core = 1:3.1.1 is needed by openoffice.org-impress-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-common = 1:3.1.1 is needed by openoffice.org-impress-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-draw = 1:3.1.1 is needed by openoffice.org-impress-1:3.1.1-2mdv2010.0.x86_64
+	libuno_cppuhelpergcc3.so.3()(64bit) is needed by openoffice.org-impress-1:3.1.1-2mdv2010.0.x86_64
+	libuno_cppu.so.3()(64bit) is needed by openoffice.org-impress-1:3.1.1-2mdv2010.0.x86_64
+	libuno_sal.so.3()(64bit) is needed by openoffice.org-impress-1:3.1.1-2mdv2010.0.x86_64
+error: Failed dependencies:
+	openoffice.org-core = 1:3.1.1 is needed by openoffice.org-presenter-screen-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-common = 1:3.1.1 is needed by openoffice.org-presenter-screen-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-impress = 1:3.1.1 is needed by openoffice.org-presenter-screen-1:3.1.1-2mdv2010.0.x86_64
+error: Failed dependencies:
+	openoffice.org-core = 1:3.1.1 is needed by openoffice.org-presentation-minimizer-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-common = 1:3.1.1 is needed by openoffice.org-presentation-minimizer-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-impress = 1:3.1.1 is needed by openoffice.org-presentation-minimizer-1:3.1.1-2mdv2010.0.x86_64
+error: Failed dependencies:
+	openoffice.org-core = 1:3.1.1 is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-common = 1:3.1.1 is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+	libcomphelp4gcc3.so()(64bit) is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+	libdbtoolslx.so()(64bit) is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+	libgolx.so()(64bit) is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+	libi18nisolang1gcc3.so()(64bit) is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+	libjlx_g.so()(64bit) is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+	libsotlx.so()(64bit) is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+	libtklx.so()(64bit) is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+	libtllx.so()(64bit) is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+	libucbhelper4gcc3.so()(64bit) is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+	libuno_cppuhelpergcc3.so.3()(64bit) is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+	libuno_cppu.so.3()(64bit) is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+	libuno_sal.so.3()(64bit) is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+	libutllx.so()(64bit) is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+	libvcllx.so()(64bit) is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+	libvos3gcc3.so()(64bit) is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+	libxcrlx.so()(64bit) is needed by openoffice.org-filter-binfilter-1:3.1.1-2mdv2010.0.x86_64
+error: Failed dependencies:
+	openoffice.org-core = 1:3.1.1 is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-common = 1:3.1.1 is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libavmedialx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libbasegfxlx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libcomphelp4gcc3.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libdbtoolslx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libfilelx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libforlx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libforuilx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libgolx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libi18nisolang1gcc3.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libi18nutilgcc3.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libooxlx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libsaxlx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libsblx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libsfxlx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libsotlx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libsvllx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libsvtlx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libsvxcorelx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libsvxlx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libsvxmsfilterlx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libtklx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libtllx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libucbhelper4gcc3.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libuno_cppuhelpergcc3.so.3()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libuno_cppu.so.3()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libuno_sal.so.3()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libutllx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libvbahelperlx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libvcllx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libvos3gcc3.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+	libxolx.so()(64bit) is needed by openoffice.org-calc-1:3.1.1-2mdv2010.0.x86_64
+error: Failed dependencies:
+	openoffice.org-core = 1:3.1.1 is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-common = 1:3.1.1 is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libbasegfxlx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libcomphelp4gcc3.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libgolx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libi18nisolang1gcc3.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libi18nutilgcc3.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libooxlx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libsaxlx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libsblx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libsfxlx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libsotlx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libsvllx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libsvtlx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libsvxcorelx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libsvxlx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libsvxmsfilterlx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libswlx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libtklx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libtllx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libucbhelper4gcc3.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libuno_cppuhelpergcc3.so.3()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libuno_cppu.so.3()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libuno_sal.so.3()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libutllx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libvcllx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libwpd-0.8.so.8()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libwps-0.1.so.1()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+	libxolx.so()(64bit) is needed by openoffice.org-writer-1:3.1.1-2mdv2010.0.x86_64
+error: Failed dependencies:
+	openoffice.org-core = 1:3.1.1 is needed by openoffice.org-wiki-publisher-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-common = 1:3.1.1 is needed by openoffice.org-wiki-publisher-1:3.1.1-2mdv2010.0.x86_64
+	openoffice.org-writer = 1:3.1.1 is needed by openoffice.org-wiki-publisher-1:3.1.1-2mdv2010.0.x86_64
+	jakarta-commons-codec is needed by openoffice.org-wiki-publisher-1:3.1.1-2mdv2010.0.x86_64
+	jakarta-commons-httpclient is needed by openoffice.org-wiki-publisher-1:3.1.1-2mdv2010.0.x86_64
+	jakarta-commons-lang is needed by openoffice.org-wiki-publisher-1:3.1.1-2mdv2010.0.x86_64
+	jakarta-commons-logging is needed by openoffice.org-wiki-publisher-1:3.1.1-2mdv2010.0.x86_64
